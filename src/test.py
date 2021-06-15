@@ -72,10 +72,16 @@ class PCARiskModel:
     """
 
     def __init__(self, returns, ann_factor, n_components, pca):
-        self.factor_exposure_ = factor_exposure(pca, returns.columns.values, np.arange(n_components))
-        self.factor_returns_ = factor_returns(pca, returns, returns.index, np.arange(n_components))
+        self.factor_exposure_ = factor_exposure(
+            pca, returns.columns.values, np.arange(n_components)
+        )
+        self.factor_returns_ = factor_returns(
+            pca, returns, returns.index, np.arange(n_components)
+        )
         self.factor_cov_matrix_ = factor_cov_matrix(self.factor_returns_, ann_factor)
-        self.idiosyncratic_var_matrix_ = idiosyncratic_var_matrix(returns, self.factor_returns_, self.factor_exposure_, ann_factor)
+        self.idiosyncratic_var_matrix_ = idiosyncratic_var_matrix(
+            returns, self.factor_returns_, self.factor_exposure_, ann_factor
+        )
 
 
 if __name__ == "__main__":
