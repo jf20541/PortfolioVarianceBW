@@ -16,7 +16,7 @@ class VarianceModel:
         factor_2 = self.timeseries.median(axis=1)
         return factor_1, factor_2
 
-    def variance(self):
+    def idiosyncratic_variance(self):
         """
         Returns: numpy array of returns variance as float
         """
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     model = VarianceModel(df)
     B = model.exposure()
     F = model.factor_covariance()
-    S = np.diag(model.variance())
+    S = np.diag(model.idiosyncratic_variance())
     X = model.asset_weights(config.WEIGHTS)
     var_portfolio = X.T.dot(B.dot(F).dot(B.T) + S).dot(X)
     print(f"Bridgewater Associates Portfolio Variance is {var_portfolio:.8f}")
