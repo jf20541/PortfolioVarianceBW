@@ -11,8 +11,8 @@ if __name__ == "__main__":
     df = yf.download(assets, start="2020-01-06", end="2021-01-06")
     df = df["Adj Close"]
     df = df.apply(lambda x: x - (x.shift(1)))[1:] / 100
-    df.to_csv("../inputs/train.csv", index_label=False)
     if df.isnull().values.any() == False:
         print("Data is Clean")
+        df.to_csv("../inputs/train.csv", index_label=False)
     else:
         print("Found Null Values")
