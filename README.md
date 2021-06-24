@@ -46,7 +46,7 @@ Install the following Python libraries
 - [YFinance](https://pypi.org/project/yfinance/)
 
 ### Run
-In a terminal or command window, navigate to the top-level project directory `MonteCarloPorfolioOptimization/` (that contains this README) and run the following command:
+In a terminal or command window, navigate to the top-level project directory `PortfolioVarianceBW/` (that contains this README) and run the following command:
 ```bash
 pip install --upgrade pip && pip install -r requirements.txt
 ``` 
