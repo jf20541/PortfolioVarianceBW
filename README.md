@@ -39,11 +39,6 @@ Created 3 modules
 - `main.py`: Calculated factors covariance, factor exposures, idiosyncratic variances, rebalanced weights
 - `data.py`: Collect the top 25 holdings(%) in BridgeWater Associates 13-F Filings as of 1Q2021
 
-### Install
-Install the following Python libraries
-- [NumPy](http://www.numpy.org/)
-- [Pandas](http://pandas.pydata.org)
-- [YFinance](https://pypi.org/project/yfinance/)
 
 ### Run
 In a terminal or command window, navigate to the top-level project directory `PortfolioVarianceBW/` (that contains this README) and run the following command:
