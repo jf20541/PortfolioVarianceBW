@@ -1,8 +1,7 @@
 # PortfolioVarianceBW
 
 ## Objective
-Calculated the top 25 holdings(%) total risk inherent for Bridgewater Associated\
-Calculating the squared weights mutiplied by each asset's variance plus the covariance of the universe assets multipled by its weights
+Collected Bridgewater Associate's 13F SEC Filing for 2021Q1 top 25 holdings based on percentage weight.  Calculated factors covariance, factor exposures, idiosyncratic variances, rebalanced weights for Portfolio Variance. Calculating the squared weights mutiplied by each asset's variance plus the covariance of the universe assets multipled by its weights
 
 ## Metric
 ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5CLARGE%20Portfolio%20Variance%20%3D%20%5Cmathbf%7BW%5E%7BT%7D%28BFB%5E%7BT%7D&plus;%20S%29W%7D)
