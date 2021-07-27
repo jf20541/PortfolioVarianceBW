@@ -33,4 +33,6 @@ Column vector for asset's weights\
 
 ## Universe
 [Bridgewater Associates's 13F Securities for Q12021](https://whalewisdom.com/filer/bridgewater-associates-inc#tabholdings_tab_link)\
+```bash
 SPY, VWO, WMT, PG, BABA, KO, JNJ, GLD, PEP, IEMG, MCD, COST, FXI, IVV, SBUX, PDD, MCHI, IAU, LQD, EL, ABT, TGT, MDLZ, JD, DHR
+```
