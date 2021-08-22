@@ -9,27 +9,24 @@ class VarianceModel:
         self.timeseries = timeseries
 
     def factors(self):
-        """
-        Returns: calculated median and mean factor as float
-        """
+        """Returns: calculated median and mean factor as float"""
         factor_1 = self.timeseries.mean(axis=1)
         factor_2 = self.timeseries.median(axis=1)
         return factor_1, factor_2
 
     def idiosyncratic_variance(self):
-        """
-        Returns: numpy array of returns variance as float
+        """Idiosyncratic Variance: type of investment risk that is endemic to an individual asset
+        Returns: [float]: numpy array of individual variance (risk)
         """
         return np.var(self.timeseries)
 
     def factor_exposure(self, factor_return, asset_return):
         """
-        Parameters
-        -----------
-        factor_return: calculate the exposed of each asset to each factor, float
-        asset_return: daily returns from time-series
-        --------
-        Returns: coefficient as float
+        Args:
+            factor_return [float]: calculate the exposed of each asset to each factor,
+            asset_return [float]: daily returns from time-series
+        Returns:
+            [float]: coefficient from Linear Regression
         """
         lr = LinearRegression()
         X = np.array(factor_return).T
@@ -38,8 +35,9 @@ class VarianceModel:
         return lr.coef_
 
     def exposure(self):
-        """
-        Returns: array-like of collected all assets exposures
+        """Exposure from individual assets from systemic exposure
+        Returns:
+            [float-array]: collected all assets exposures
         """
         all_exposure = []
         for i in range(len(self.timeseries.columns)):
@@ -53,18 +51,13 @@ class VarianceModel:
         return factor_exposure_a
 
     def factor_covariance(self):
-        """
-        Returns: array-like of factor covariance
-        """
+        """Returns: [float]: array-like of factor covariance"""
         return np.cov(self.factors()[0], self.factors()[1], ddof=1)
 
     def asset_weights(self, asset_weights):
-        """
-        Parameters
-        -----------
-        asset_weights: array-like for asset's respective weights
-        --------
-        Returns: rebalanced weights so sum equal to 100
+        """Rebalancing weights to sum 1
+        Args: asset_weights [float]: array-like for asset's respective weights
+        Returns: [float]: rebalanced weights so sum equal to 100
         """
         weights = np.array(asset_weights)
         rebalance_weights = weights / np.sum(weights)
