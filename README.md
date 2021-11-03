@@ -32,7 +32,7 @@ Column vector for asset's weights\
 ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5CLARGE%20%5Cmathbf%7BW%7D%20%3D%20%5Cbinom%7Bw_%7B1%7D%7D%7Bw_%7Bn%7D%7D)
 
 ## Universe
-[Bridgewater Associates's 13F Securities for Q12021](https://whalewisdom.com/filer/bridgewater-associates-inc#tabholdings_tab_link)\
+[Bridgewater Associates's 13F Securities for Q12021](https://whalewisdom.com/filer/bridgewater-associates-inc#tabholdings_tab_link)
 ```bash
 SPY, VWO, WMT, PG, BABA, KO, JNJ, GLD, PEP, IEMG, MCD, COST, FXI, IVV, SBUX, PDD, MCHI, IAU, LQD, EL, ABT, TGT, MDLZ, JD, DHR
 ```
